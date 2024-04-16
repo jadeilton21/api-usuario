@@ -19,4 +19,12 @@ public class Pessoa {
     public void setLogin(String login) {
         this.login = login;
     }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }
