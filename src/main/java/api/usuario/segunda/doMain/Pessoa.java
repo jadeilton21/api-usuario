@@ -11,4 +11,8 @@ public class Pessoa {
         this.login = login;
         this.senha = senha;
     }
+
+    public String getLogin() {
+        return login;
+    }
 }
