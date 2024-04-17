@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PessoaRepository {
 
     public void save(Pessoa pessoa) {
-
+        System.out.println("Salvo - Pessoa salva no Banco de Dados!");
+        System.out.println(pessoa);
     }
 }
