@@ -14,4 +14,7 @@ public class PessoaRepository {
 
     public void update(Pessoa pessoa) {
     }
+
+    public void remove(Integer id) {
+    }
 }
