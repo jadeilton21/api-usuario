@@ -11,4 +11,7 @@ public class PessoaRepository {
         System.out.println("Salvo - Pessoa salva no Banco de Dados!");
         System.out.println(pessoa);
     }
+
+    public void update(Pessoa pessoa) {
+    }
 }
