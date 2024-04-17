@@ -3,10 +3,7 @@ package api.usuario.segunda.controllers;
 import api.usuario.segunda.doMain.Pessoa;
 import api.usuario.segunda.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/pessoa")
@@ -15,9 +12,16 @@ public class PessoaControllers {
     @Autowired
     private PessoaRepository repository;
 
-
+    @PostMapping
     public void cadastrarPessoa(@RequestBody Pessoa pessoa){
 
         repository.save(pessoa);
     }
+
+    public void atualizarPessoa(@RequestBody Pessoa pessoa){
+
+        repository.update(pessoa);
+    }
+
+
 }
