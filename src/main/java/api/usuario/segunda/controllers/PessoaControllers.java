@@ -22,8 +22,8 @@ public class PessoaControllers {
 
         repository.update(pessoa);
     }
-
-    private void deletarPessoa(@RequestBody Pessoa pessoa){
+    @DeleteMapping("{id}")
+    private void deletarPessoa(@PathVariable("id") Integer id){
 
     }
 }
