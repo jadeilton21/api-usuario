@@ -18,6 +18,6 @@ public class PessoaControllers {
 
     public void cadastrarPessoa(@RequestBody Pessoa pessoa){
 
-
+        repository.save(pessoa);
     }
 }
