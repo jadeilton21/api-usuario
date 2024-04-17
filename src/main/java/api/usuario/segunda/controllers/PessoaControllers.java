@@ -17,11 +17,13 @@ public class PessoaControllers {
 
         repository.save(pessoa);
     }
-
+    @PutMapping
     public void atualizarPessoa(@RequestBody Pessoa pessoa){
 
         repository.update(pessoa);
     }
 
+    private void deletarPessoa(@RequestBody Pessoa pessoa){
 
+    }
 }
