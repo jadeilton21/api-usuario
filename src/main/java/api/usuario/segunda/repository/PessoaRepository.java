@@ -4,6 +4,8 @@ import api.usuario.segunda.doMain.Pessoa;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Repository
 public class PessoaRepository {
 
@@ -21,6 +23,11 @@ public class PessoaRepository {
     public void remove(Integer id) {
         System.out.println(String.format("DELETAR/ID - Deletando o id: %d e excluido o usuario", id));
         System.out.println(id);
+
+    }
+
+    public List<Pessoa> listAll() {
+
 
     }
 }
