@@ -32,12 +32,13 @@ public class PessoaControllers {
 
     }
 
-    @GetMapping("/usuario")
-    public List<Pessoa> listarUsuario(){
+    @GetMapping()
+    public List<Pessoa> listarPessoa(){
         return repository.listAll();
     }
 
 
+}
 
 
 
