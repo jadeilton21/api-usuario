@@ -35,4 +35,9 @@ public class PessoaRepository {
         return usuarios;
 
     }
+
+    public Pessoa finById(Integer id) {
+        System.out.println(String.format("FIND/id - Recebendo o id: %d para localizar um usuário", id));
+        return new Pessoa("jade","password");
+    }
 }
