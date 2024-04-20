@@ -37,7 +37,10 @@ public class PessoaControllers {
         return repository.listAll();
     }
 
-
+    @GetMapping()
+    public Pessoa pegarUm(@PathVariable("id") Integer id){
+        return repository.finById(id);
+    }
 
 
 
