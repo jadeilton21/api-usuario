@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Repository
+@RequestMapping("/repository")
 public class PessoaRepository {
 
     public void save(Pessoa pessoa) {
