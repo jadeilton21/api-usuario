@@ -4,6 +4,7 @@ import api.usuario.segunda.doMain.Pessoa;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
@@ -27,7 +28,11 @@ public class PessoaRepository {
     }
 
     public List<Pessoa> listAll() {
-
+        System.out.println("LIST - Listando os usários do sistema");
+        List<Pessoa> usuarios = new ArrayList<>();
+        usuarios.add(new Pessoa("jadeilton","password"));
+        usuarios.add(new Pessoa("jade","masterpass"));
+        return usuarios;
 
     }
 }
