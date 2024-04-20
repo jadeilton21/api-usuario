@@ -5,6 +5,8 @@ import api.usuario.segunda.repository.PessoaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/pessoa")
 public class PessoaControllers {
@@ -28,6 +30,11 @@ public class PessoaControllers {
         repository.remove(id);
 
 
+    }
+
+    @GetMapping("/usuario")
+    public List<Pessoa> listarUsuario(){
+        return repository.listAll();
     }
 
 
