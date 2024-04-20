@@ -31,4 +31,19 @@ public class SwaggerConfig {
         return apiInfoBuilder;
 
     }
+    @Bean
+    public Docket detalheApi() {
+        Docket docket = new Docket(DocumentationType.SWAGGER_2);
+
+        docket
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("web.dio.api.my.dio.api.controllers"))
+                .paths(PathSelectors.any())
+                .build()
+                .apiInfo(this.informacoesApi().build())
+                .consumes(new HashSet<String>(Arrays.asList("application/json")))
+                .produces(new HashSet<String>(Arrays.asList("application/json")));
+
+        return docket;
+    }
 }
