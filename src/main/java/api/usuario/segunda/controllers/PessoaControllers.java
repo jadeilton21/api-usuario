@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/pessoa")
+
 public class PessoaControllers {
 
     @Autowired
     private PessoaRepository repository;
 
-    @PostMapping
+    @PostMapping("/pessoa")
     public void cadastrarPessoa(@RequestBody Pessoa pessoa){
 
         repository.save(pessoa);
     }
-    @PutMapping
+    @PutMapping("/pessoa")
     public void atualizarPessoa(@RequestBody Pessoa pessoa){
 
         repository.update(pessoa);
     }
-    @DeleteMapping("{id}")
+    @DeleteMapping("/pessoa/{id}")
     private void deletarPessoa(@PathVariable("id") Integer id){
 
         repository.remove(id);
@@ -32,12 +32,12 @@ public class PessoaControllers {
 
     }
 
-    @GetMapping()
+    @GetMapping("/pessoa")
     public List<Pessoa> listarPessoa(){
         return repository.listAll();
     }
 
-    @GetMapping()
+    @GetMapping("/pessoa/{id}")
     public Pessoa pegarUm(@PathVariable("id") Integer id){
         return repository.finById(id);
     }
