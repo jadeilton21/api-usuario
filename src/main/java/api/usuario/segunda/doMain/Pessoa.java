@@ -27,4 +27,11 @@ public class Pessoa {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+    @Override
+    public String toString() {
+        return "User{" +
+                "login='" + login + '\'' +
+                ", password='" + senha + '\'' +
+                '}';
+    }
 }
